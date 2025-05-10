@@ -15,8 +15,8 @@ qa_pairs = {}
 with open("mea-bot-compiled.csv", newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-        question = row["Question"].strip().lower()
-        answer = row["Answer"].strip()
+        question = row["question"].strip().lower()
+        answer = row["answer"].strip()
         qa_pairs[question] = answer# Allow requests from any origin (for frontend communication)
 
 # Your chatbot logic here
