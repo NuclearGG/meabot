@@ -1,0 +1,58 @@
+code,easter
+#01FC01,Messi is the GOAT(Greatest Of All Time). Ronaldo is BAD at football
+#01FC02,FCB is the COTS(Club Of The Season). Visca Barca
+#01FC03,15 is my favourite number. BENZEMA
+#01FC04,RICE!
+#01FC05,Hala Madrid
+#01FC06,"<div class=""audio-player"">
+        <audio id=""myAudio"" src=""/3p_assset/hms.mp3""></audio> <div class=""controls"">
+            <button id=""playPauseBtn"" class=""play-pause-btn""></button>
+
+            <div class=""progress-container"">
+                <div id=""progressBar"" class=""progress-bar""></div>
+                <input type=""range"" id=""seekSlider"" class=""seek-slider"" value=""0"" min=""0"" max=""100"">
+            </div>
+
+            <div class=""time-display"">
+                <span id=""currentTime"">0:00</span> / <span id=""duration"">0:00</span>
+            </div>
+
+            <div class=""volume-container"">
+                <button id=""muteBtn"" class=""mute-btn""></button>
+            </div>
+        </div>"
+#01FC07,"<div class=""audio-player"">
+        <audio id=""myAudio"" src=""/3p_assset/fcbs.mp3""></audio> <div class=""controls"">
+            <button id=""playPauseBtn"" class=""play-pause-btn""></button>
+
+            <div class=""progress-container"">
+                <div id=""progressBar"" class=""progress-bar""></div>
+                <input type=""range"" id=""seekSlider"" class=""seek-slider"" value=""0"" min=""0"" max=""100"">
+            </div>
+
+            <div class=""time-display"">
+                <span id=""currentTime"">0:00</span> / <span id=""duration"">0:00</span>
+            </div>
+
+            <div class=""volume-container"">
+                <button id=""muteBtn"" class=""mute-btn""></button>
+            </div>
+        </div>"
+
+#ONLIND,"<div class=""audio-player"">
+        <audio id=""myAudio"" src=""/3p_assset/indian.mp3""></audio> <div class=""controls"">
+            <button id=""playPauseBtn"" class=""play-pause-btn""></button>
+
+            <div class=""progress-container"">
+                <div id=""progressBar"" class=""progress-bar""></div>
+                <input type=""range"" id=""seekSlider"" class=""seek-slider"" value=""0"" min=""0"" max=""100"">
+            </div>
+
+            <div class=""time-display"">
+                <span id=""currentTime"">0:00</span> / <span id=""duration"">0:00</span>
+            </div>
+
+            <div class=""volume-container"">
+                <button id=""muteBtn"" class=""mute-btn""></button>
+            </div>
+        </div>"
