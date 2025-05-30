@@ -12,7 +12,7 @@ import random
 
 app = Flask(__name__)
 
-CORS(app)
+CORS(app, origin='127.0.0.1:1306')
 
 translator = str.maketrans('','',string.punctuation)
 greetings = ['hey','howda','howdy','hello','hi',"whats up"]
