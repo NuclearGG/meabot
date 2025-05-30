@@ -45,17 +45,17 @@ with open("mea-bot-compiled.csv", newline='', encoding='utf-8') as basic:
 # Your chatbot logic here
 def get_bot_response(user_input):
     # Normalize user input first
-    normalized_user_input = user_input.strip().lower().translate(translator)
+    normalized_user_input = user_input.strip().lower()
 
 
     for greet_phrase in greetings:
-        if greet_phrase in normalized_user_input:
+        if greet_phrase in normalized_user_input.translate(translator):
             return random.choice(greeting_responses)
 
 
     for end_phrase in chat_end:
-        if end_phrase in normalized_user_input:
-            if 'exit' in normalized_user_input: # Check for 'exit' specifically here
+        if end_phrase in normalized_user_input.translate(translator):
+            if 'exit' in normalized_user_input.translate(translator): # Check for 'exit' specifically here
                 return "EXIT<br>CODE:0<br>EXITING AT CODE 0<br> no error"
             return random.choice(farewell_responses)
 
