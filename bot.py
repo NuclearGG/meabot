@@ -13,7 +13,7 @@ import random
 app = Flask(__name__)
 
 CORS(app)
-user_input = input()
+
 translator = str.maketrans('','',string.punctuation)
 greetings = ['hey','howda','howdy','hello','hi',"whats up"]
 chat_end = ["bye","exit0","exit","goodbye"]
@@ -72,9 +72,7 @@ def get_bot_response(user_input):
 
     return "Sorry, I didn't understand that. Please ask something else."
 
-response = get_bot_response(user_input)
 
-print(response)
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.json
