@@ -66,7 +66,7 @@ def get_bot_response(user_input):
         if question in normalized_user_input: # If a QA question is part of the user's input
             return answer
     for code, easter in easterpair.items():
-        if  normalized_user_input in code:
+        if  normalized_user_input == code:
             return easter
 
 
