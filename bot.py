@@ -4,7 +4,7 @@ import os
 import csv
 import string
 import random
-
+from murf import Murf
 # Load CSV data into a dictionary
 
 
@@ -72,6 +72,18 @@ def get_bot_response(user_input):
 
     return "Sorry, I didn't understand that. Please ask something else."
 
+def get_tts(text):
+    client = Murf(api_key="ap2_743db41b-6831-44da-92a6-b1580a0ee989")
+
+    speech = client.text_to_speech.generate(
+        text=text,
+        voice_id="en-UK-heidi",
+        style="Conversational",
+        pitch=11
+    )
+
+    return speech.audio_file
+
 
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -79,6 +91,13 @@ def chat():
     user_input = data.get("message", "")
     response = get_bot_response(user_input)
     return jsonify({"reply": response})
+
+@app.route('/tts', methods=['POST'])
+def tts():
+    requirement = request.json
+    text = requirement.get("text","")
+    audio = get_tts(text);
+    return jsonify({"audio_file",audio})
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
