@@ -94,10 +94,18 @@ def chat():
 
 @app.route('/tts', methods=['POST'])
 def tts():
-    requirement = request.json
-    text = requirement.get("text","")
-    audio = get_tts(text);
-    return jsonify({"audio_file",audio})
+    data = request.get_json()
+    text = data.get('message', '').strip()
+
+    if not text:
+        return jsonify({"error": "Empty text provided"}), 400
+
+    try:
+        audio = get_tts(text)
+        return jsonify({"audio_file": audio})
+    except Exception as e:
+        print("TTS generation error:", str(e))
+        return jsonify({"error": "TTS generation failed"}), 500
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
