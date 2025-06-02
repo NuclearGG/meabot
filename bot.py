@@ -77,9 +77,9 @@ def get_tts(text):
 
     speech = client.text_to_speech.generate(
         text=text,
-        voice_id="en-UK-heidi",
+        voice_id="en-UK-hugo",
         style="Conversational",
-        pitch=11
+        pitch=3
     )
 
     return speech.audio_file
