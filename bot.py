@@ -73,7 +73,7 @@ def get_bot_response(user_input):
     return "Sorry, I didn't understand that. Please ask something else."
 
 def get_tts(text):
-    client = Murf(api_key="ap2_743db41b-6831-44da-92a6-b1580a0ee989")
+    client = Murf(api_key="ap2_0bb47d21-fec8-4d8e-8feb-bc8b2a380fbb")
 
     speech = client.text_to_speech.generate(
         text=text,
